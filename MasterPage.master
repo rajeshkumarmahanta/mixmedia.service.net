@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+       <meta charset="utf-8">
+    <title>Mix Media Services</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <asp:ContentPlaceHolder id="head" runat="server">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<%--favicon--%>
+<link rel="icon" type="image/x-icon" href="assests/images/favicon.ico"/>
+<link href="assests/css/StyleSheet.css" rel="stylesheet" />
+<link href="assests/css/lightbox.min.css" rel="stylesheet" />
+<%--animation--%>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+                <%--Header--%>
+            <header class="sticky-top">
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <asp:LinkButton ID="linkbtnhome" runat="server" CssClass="fw-bold text-light text-decoration-none" OnClick="linkbtnhome_Click1">Home</asp:LinkButton>
+                    <%--<asp:LinkButton ID="linkbtnadminpannel" runat="server" CssClass="text-light mx-1 px-1 fw-bold" OnClick="linkbtnadminpannel_Click1"><span class="text-light px-1"><i class="fa-solid fa-lock"></i></span>Admin Login</asp:LinkButton>--%>
+                    <asp:LinkButton ID="linkbtnservices" runat="server" CssClass="text-light mx-1 px-1 fw-bold" OnClick="linkbtnservices_Click" >Services</asp:LinkButton>
+                    <asp:LinkButton ID="linkbtncontact" runat="server" CssClass="text-light mx-1 px-1 fw-bold" OnClick="linkbtncontact_Click" >Contact</asp:LinkButton>
+                    <asp:LinkButton ID="linkbtnteam" runat="server" CssClass="text-light mx-1 px-1 fw-bold" OnClick="linkbtnteam_Click">Team</asp:LinkButton>
+                    <a href="Admin/login.aspx" class="text-light mx-1 px-1 fw-bold" target="_blank"><span class="text-light px-1"><i class="fa-solid fa-lock"></i></span>Admin Login</a>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <asp:LinkButton ID="linkbtntwitter" CssClass="text-white" runat="server" OnClick="linkbtntwitter_Click">Follow on Twitter</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="linkbtnyt" CssClass="text-white" runat="server" OnClick="linkbtnyt_Click">Subscribe on youtube</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="linkbtninstagram" CssClass="text-white" runat="server" OnClick="linkbtninstagram_Click">Follow on Instagram</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="linkbtnfacebook" CssClass="text-white" runat="server" OnClick="linkbtnfacebook_Click">Like on Facebook</asp:LinkButton></li>
+                        <li>
+                            <asp:LinkButton ID="linkbtnemail" CssClass="text-white" runat="server" OnClick="linkbtnemail_Click">Email me</asp:LinkButton></li>
+                            
+                        <%--<li><a href="#" class="text-white">Follow on Twitter</a></li>
+                      <li><a href="#" class="text-white">Like on Facebook</a></li>
+                        <li><a href="#" class="text-white">Email me</a></li>--%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a href="Default.aspx" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                    <circle cx="12" cy="13" r="4" />
+                </svg>
+                <strong>MIX<span class="fw-bold px-1 text-warning">MEDIA SERVICES</span></strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+            <%--Header end--%>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+                    <%--footer section--%>
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+        <section class="footer-section bg-dark">
+<div class="container-fluid footer-padding mt-3 bg-dark">
+
+  <footer class="text-center text-white bg-dark">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+<a href="https://www.facebook.com/a.king.rajesh.kumar" target="_blank" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-facebook-f"></i></a>
+
+<!-- Twitter -->
+<a href="https://twitter.com/RajeshKumar2128" target="_blank" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-twitter"></i></a>
+
+<!-- Google -->
+<a href="mailto:rajeshmahanta@gmail.com" target="_blank" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-google"></i></a>
+
+<!-- Instagram -->
+<a href="https://www.instagram.com/the_scripy_2128/" target="_blank" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-instagram"></i></a>
+<!-- Youtube -->
+<a href="https://www.youtube.com/@a_rajesh_kumar_vlogs" target="_blank" class="btn btn-outline-light btn-floating m-1" role="button"><i class="fab fa-youtube"></i></a>
+
+
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+
+  <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2024 Copyright:
+    <a class="text-light animate__backInUp" href="https://www.instagram.com/the_scripy_2128/">Design By <span class="text-warning">Rajesh</span></a>
+  </div>
+  <!-- Copyright -->
+</footer>
+  
+</div>
+ </section>
+<!-- End of .container -->
+        <%--footer section end--%>
+            <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-warning text-light"><i class="fa-solid fa-circle-up"></i></button>
+   
+    </form>
+    <script src="assests/js/JavaScript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="assests/js/lightbox-plus-jquery.js"></script>
+<script src="assests/js/lightbox-plus-jquery.min.js"></script>
+    <script src="assests/member-section/js/popper.js"></script>
+    <script src="assests/member-section/js/jquery.min.js"></script>
+    <script src="assests/member-section/js/main.js"></script>
+    <script src="assests/member-section/js/owl.carousel.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
+</body>
+</html>
